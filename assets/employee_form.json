@@ -1,0 +1,131 @@
+
+{
+  "title": "Employee Registration Form",
+  "fields": [
+    {
+      "name": "full_name",
+      "label": "Full Name",
+      "type": "text",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 50
+    },
+    {
+      "name": "email",
+      "label": "Email",
+      "type": "email",
+      "required": true
+    },
+    {
+      "name": "phone",
+      "label": "Mobile Number",
+      "type": "phone",
+      "required": true
+    },
+    {
+      "name": "password",
+      "label": "Password",
+      "type": "password",
+      "required": true
+    },
+    {
+      "name": "age",
+      "label": "Age",
+      "type": "number",
+      "required": true,
+      "min": 18,
+      "max": 60
+    },
+    {
+      "name": "date",
+      "label": "Date of Birth",
+      "type": "date",
+      "required": true
+    },
+    {
+      "name": "gender",
+      "label": "Gender",
+      "type": "radio",
+      "options": ["Male", "Female", "Other"]
+    },
+    {
+      "name": "department",
+      "label": "Department",
+      "type": "dropdown",
+      "options": ["IT", "HR", "Finance", "Marketing"]
+    },
+    {
+      "name": "skills",
+      "label": "Skills",
+      "type": "checkbox",
+      "options": ["Flutter", "Dart", "Java", "SQL"]
+    },
+    {
+      "name": "experience",
+      "label": "Experience (Years)",
+      "type": "slider",
+      "min": 0,
+      "max": 30,
+      "divisions": 30
+    },
+    {
+      "name": "joining_time",
+      "label": "Preferred Joining Time",
+      "type": "time"
+    },
+    {
+      "name": "resume",
+      "label": "Upload Resume",
+      "type": "file",
+      "allowedExtensions": ["pdf", "doc", "docx"]
+    },
+    {
+      "name": "profile_picture",
+      "label": "Profile Picture",
+      "type": "image"
+    },
+    {
+      "name": "address",
+      "label": "Address",
+      "type": "textarea",
+      "maxLength": 300
+    },
+    {
+      "name": "is_married",
+      "label": "Are you married?",
+      "type": "switch"
+    },
+    {
+      "name": "spouse_name",
+      "label": "Spouse Name",
+      "type": "text",
+      "visibleIf": {
+        "field": "is_married",
+        "equals": true
+      }
+    },
+    {
+      "name": "country",
+      "label": "Country",
+      "type": "dropdown",
+      "options": ["India", "USA", "UK"]
+    },
+    {
+      "name": "state",
+      "label": "State",
+      "type": "dependentDropdown",
+      "dependsOn": "country",
+      "optionsMap": {
+        "India": ["Tamil Nadu", "Kerala", "Karnataka"],
+        "USA": ["California", "Texas", "Florida"],
+        "UK": ["England", "Scotland", "Wales"]
+      }
+    },
+    {
+      "name": "accept_terms",
+      "label": "I accept the terms and conditions",
+      "type": "checkbox_single",
+      "required": true
+    }
+  ]
+}
